@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="left-component">
+      <img class="bg-quotes" src="images/pattern-quotes.svg" alt="">
+      <h3 class="main-heading">“ I’ve been interested in coding for a while but never taken the jump, until now.
+      I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+      excited about the future. ”</h3>
+      <h5 class="name-heading">Tanya Sinclair</h5>
+      <h5 class="job-heading">UX Engineer</h5>
+      <img class="bg-curve" src="images/pattern-curve.svg" alt="">
+
+    </div>
+    <img class="img-profile" src="images/image-tanya.jpg" alt="">
+    <img class="bg-pattern" src="images/pattern-bg.svg" alt="">
+  </div>
+
+  <div class="card">
+    <div class="left-component">
+      <img class="bg-quotes" src="images/pattern-quotes.svg" alt="">
+      <h3 class="main-heading">“ If you want to lay the best foundation possible I’d recommend taking this course.
+      The depth the instructors go into is incredible. I now feel so confident about
+      starting up as a professional developer. ”</h3>
+      <h5 class="name-heading">John Tarkpor</h5>
+      <h5 class="job-heading">Junior Front-end Developer</h5>
+      <img class="bg-curve" src="images/pattern-curve.svg" alt="">
+
+    </div>
+    <img class="img-profile" src="images/image-john.jpg" alt="">
+    <img class="bg-pattern" src="images/pattern-bg.svg" alt="">
+
+  </div>
+
+  <div class="buttons">
+    <button class="bt-left" onclick="plusDivs(-1)"><img src="images/icon-prev.svg" alt=""></button>
+    <button class="bt-right" onclick="plusDivs(+1)"><img src="images/icon-next.svg" alt="">
+    </button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Natalia Tuszko</a>.
+  </div>
+  <script type="text/javascript">
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("card");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "flex";
+    }
+  </script>
+</body>
+</html>
